@@ -1,0 +1,55 @@
+Table transacoes {
+  id uuid [pk, default: `uuid_generate_v4()`]
+  data_transacao timestamp
+  valor_bruto_venda float
+  valor_liquido_venda float
+  valor_desconto float
+  tipo_produto varchar
+  meio_captura varchar
+  tipo_transacao varchar
+  codigo_bandeira varchar
+  codigo_produto varchar
+  identificacao_loja varchar
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table tempo {
+  id uuid [pk, default: `uuid_generate_v4()`]
+  data date
+  dia_semana varchar
+  mes int
+  ano int
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table loja {
+  id uuid [pk, default: `uuid_generate_v4()`]
+  identificacao_loja varchar(15) [unique]
+  codigo_ec_venda varchar
+  codigo_ec_pagamento varchar
+  cnpj_ec_pagamento varchar
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table produto {
+  id uuid [pk, default: `uuid_generate_v4()`]
+  codigo_produto varchar(20) [unique]
+  descricao varchar
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table pagamento {
+  id uuid [pk, default: `uuid_generate_v4()`]
+  codigo_bandeira varchar(10) [unique]
+  tipo_pagamento varchar
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Ref: transacoes.identificacao_loja > loja.identificacao_loja
+Ref: transacoes.codigo_produto > produto.codigo_produto
+Ref: transacoes.codigo_bandeira > pagamento.codigo_bandeira
