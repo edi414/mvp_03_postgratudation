@@ -4,23 +4,25 @@ from datetime import datetime
 import os
 import shutil
 from ftplib import FTP_TLS
-import pandas as pd
-from scripts.reading_files import ExtratoTransacao
-from scripts.transform_files import TransformerTrasacoes
-from scripts.connection_db import insert_df_to_db
+from dotenv import load_dotenv
+from reading_files import ExtratoTransacao
+from transform_files import TransformerTrasacoes
+from connection_db import insert_df_to_db
 
-host = "sftp1.tribanco.com.br"
-user = "ftp_edi_supermercadopopular"
-password = "xhAZYpXWMKoYFz0SDvX0*"
+load_dotenv()
+
+host = os.getenv('HOST')
+user = os.getenv('USER')
+password = os.getenv('PASSWORD')
 local_directory = os.getcwd()
-google_drive_directory = 'G:/Meu Drive/Reports/Maquinetas/integration_conciliacao/processed_files'
+google_drive_directory = os.getenv('GOOGLE_DRIVE_DIRECTORY')
 
 connection_database = {
-    'host': 'monorail.proxy.rlwy.net',
-    'user': 'postgres',
-    'password': 'G1CG2B*6d6GEDdABGcf--dA5cb*5bEf6',
-    'dbname': 'railway',
-    'port': '48186'
+    'host': os.getenv('DB_HOST'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'dbname': os.getenv('DB_NAME'),
+    'port': os.getenv('DB_PORT')
 }
 
 log_directory = os.path.join(local_directory, "log")
