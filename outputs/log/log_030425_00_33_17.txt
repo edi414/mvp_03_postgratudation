@@ -1,0 +1,477 @@
+2025-04-03 00:33:23,260 - WARNING - Não foi possível conectar ao SFTP: 530 Login incorrect.
+2025-04-03 00:33:23,260 - INFO - Continuando apenas com sincronização do Google Drive
+2025-04-03 00:33:23,425 - INFO - Arquivos encontrados no Google Drive: 188
+2025-04-03 00:33:24,552 - INFO - Arquivos registrados no banco: 0
+2025-04-03 00:33:24,553 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241005_00027
+2025-04-03 00:33:24,553 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241231_00067
+2025-04-03 00:33:24,553 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241024_00027
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240929_00018
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250212_00121
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241202_00038
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250113_00086
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241210_00047
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250218_00122
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241014_00027
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250215_00122
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241015_00027
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241218_00053
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241029_00027
+2025-04-03 00:33:24,555 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250209_00121
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250119_00089
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250308_00156
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241219_00053
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250123_00099
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241030_00027
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241125_00030
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250304_00142
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241113_00028
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241122_00030
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241216_00053
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241221_00057
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250323_00172
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250220_00129
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241212_00051
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241008_00027
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241220_00056
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250317_00161
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241214_00053
+2025-04-03 00:33:24,556 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241022_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241119_00029
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250116_00087
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241219_02740
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250227_00140
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240920_00007
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241031_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241230_00061
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241114_00028
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240924_00012
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250312_00159
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250203_00104
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241223_00057
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241013_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241121_00030
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250219_00122
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250326_00173
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250313_00159
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241106_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241217_00053
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241205_00045
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241225_00060
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250306_00156
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250325_00173
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241018_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241026_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250131_00104
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241105_00027
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250202_00104
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250216_00122
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241120_00030
+2025-04-03 00:33:24,557 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241009_00027
+2025-04-03 00:33:24,558 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250106_02780
+2025-04-03 00:33:24,558 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250201_00104
+2025-04-03 00:33:24,558 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241027_00027
+2025-04-03 00:33:24,558 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250310_00156
+2025-04-03 00:33:24,558 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241002_00018
+2025-04-03 00:33:24,558 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250204_00104
+2025-04-03 00:33:24,559 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241025_00027
+2025-04-03 00:33:24,559 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241107_00027
+2025-04-03 00:33:24,559 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241010_00027
+2025-04-03 00:33:24,559 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241011_00027
+2025-04-03 00:33:24,559 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241020_00027
+2025-04-03 00:33:24,559 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250118_00089
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250228_00140
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240921_00011
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241129_00038
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250121_00090
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241123_00030
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241004_00027
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240919_00004
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241016_00027
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250106_00076
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241001_00018
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250226_00140
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241203_00044
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241118_00029
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250109_00079
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250314_00160
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250114_00086
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241209_00047
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241102_00027
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240926_00013
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241229_00061
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241109_00028
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250221_00129
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241028_00027
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250129_00104
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250303_00142
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241213_00051
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241215_00053
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250130_00104
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250112_00086
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250120_00089
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241207_00047
+2025-04-03 00:33:24,560 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250213_00121
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241012_00027
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250217_00122
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250208_00121
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241117_00029
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250318_00161
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240928_00018
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250210_00121
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250319_00161
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250205_00104
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241226_00060
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250324_00172
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250207_00121
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241124_00030
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250301_00142
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250328_00173
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250111_00086
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241019_00027
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250104_00076
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241115_00029
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250110_00084
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250103_00072
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250117_00089
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250224_00130
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241206_00046
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250124_00099
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250316_00161
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250125_00099
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240927_00013
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241130_00038
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250322_00172
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250327_00173
+2025-04-03 00:33:24,561 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250222_00130
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241224_00057
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250102_00071
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241128_00038
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241017_00027
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241112_00028
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250320_00171
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241003_00027
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250115_00086
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250321_00171
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241110_00028
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241023_00027
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241126_00030
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241222_00057
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250225_00137
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250315_00161
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241208_00047
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241211_00048
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241204_00044
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250108_00078
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250305_00142
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241228_00061
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250214_00121
+2025-04-03 00:33:24,562 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240925_00013
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250127_00099
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250223_00130
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241111_00028
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241127_00030
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240930_00018
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250206_00118
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241116_00029
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250128_00098
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241108_00027
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241227_00060
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250211_00121
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250307_00156
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241007_00027
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240923_00011
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241101_00027
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250126_00099
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240922_00011
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250107_00078
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20240918_00004
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241021_00027
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250309_00156
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20241104_00027
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250122_00090
+2025-04-03 00:33:24,563 - INFO - Arquivo encontrado no Google Drive sem registro no banco: EXTRATO_UNICA_51309_20250311_00159
+2025-04-03 00:33:24,563 - INFO - Total de arquivos analisados: 188
+2025-04-03 00:33:24,563 - INFO - Arquivos a serem processados: 188
+2025-04-03 00:33:24,563 - INFO - Arquivos com inconsistências: 0
+2025-04-03 00:33:24,563 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241005_00027
+2025-04-03 00:33:24,598 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241005_00027
+2025-04-03 00:33:26,873 - INFO - 12 novos registros inseridos na tabela tempo.
+2025-04-03 00:33:27,096 - INFO - 1 novos registros inseridos na tabela loja.
+2025-04-03 00:33:27,852 - INFO - 6 novos registros inseridos na tabela produto.
+2025-04-03 00:33:28,298 - INFO - 3 novos registros inseridos na tabela pagamento.
+2025-04-03 00:34:03,980 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241231_00067
+2025-04-03 00:34:04,010 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241231_00067
+2025-04-03 00:34:05,909 - INFO - 7 novos registros inseridos na tabela tempo.
+2025-04-03 00:34:06,017 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:34:06,233 - INFO - 1 novos registros inseridos na tabela produto.
+2025-04-03 00:34:06,344 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:34:47,947 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241024_00027
+2025-04-03 00:34:47,977 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241024_00027
+2025-04-03 00:34:50,005 - INFO - 8 novos registros inseridos na tabela tempo.
+2025-04-03 00:34:50,111 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:34:50,219 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:34:50,329 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:35:20,292 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20240929_00018
+2025-04-03 00:35:20,322 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20240929_00018
+2025-04-03 00:35:22,024 - INFO - 5 novos registros inseridos na tabela tempo.
+2025-04-03 00:35:22,132 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:35:22,241 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:35:22,351 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:35:48,962 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250212_00121
+2025-04-03 00:35:48,991 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250212_00121
+2025-04-03 00:35:50,881 - INFO - 7 novos registros inseridos na tabela tempo.
+2025-04-03 00:35:50,989 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:35:51,099 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:35:51,212 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:36:19,064 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241202_00038
+2025-04-03 00:36:19,093 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241202_00038
+2025-04-03 00:36:20,478 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:36:20,589 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:36:20,695 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:36:20,801 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:36:59,327 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250113_00086
+2025-04-03 00:36:59,359 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250113_00086
+2025-04-03 00:37:00,792 - INFO - 3 novos registros inseridos na tabela tempo.
+2025-04-03 00:37:00,902 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:37:01,010 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:37:01,116 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:37:27,071 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241210_00047
+2025-04-03 00:37:27,096 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241210_00047
+2025-04-03 00:37:28,866 - INFO - 6 novos registros inseridos na tabela tempo.
+2025-04-03 00:37:28,974 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:37:29,079 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:37:29,186 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:37:49,974 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250218_00122
+2025-04-03 00:37:50,005 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250218_00122
+2025-04-03 00:37:51,745 - INFO - 6 novos registros inseridos na tabela tempo.
+2025-04-03 00:37:51,856 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:37:51,962 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:37:52,080 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:38:10,519 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241014_00027
+2025-04-03 00:38:10,544 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241014_00027
+2025-04-03 00:38:11,977 - INFO - 4 novos registros inseridos na tabela tempo.
+2025-04-03 00:38:12,084 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:38:12,190 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:38:12,301 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:38:37,549 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250215_00122
+2025-04-03 00:38:37,582 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250215_00122
+2025-04-03 00:38:39,941 - INFO - 11 novos registros inseridos na tabela tempo.
+2025-04-03 00:38:40,048 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:38:40,154 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:38:40,260 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:39:16,617 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241015_00027
+2025-04-03 00:39:16,654 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241015_00027
+2025-04-03 00:39:18,081 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:39:18,189 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:39:18,300 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:39:18,407 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:39:39,716 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241218_00053
+2025-04-03 00:39:39,746 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241218_00053
+2025-04-03 00:39:41,628 - INFO - 7 novos registros inseridos na tabela tempo.
+2025-04-03 00:39:41,734 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:39:41,840 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:39:41,946 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:40:14,423 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241029_00027
+2025-04-03 00:40:14,452 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241029_00027
+2025-04-03 00:40:16,307 - INFO - 6 novos registros inseridos na tabela tempo.
+2025-04-03 00:40:16,413 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:40:16,523 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:40:16,637 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:40:45,108 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250209_00121
+2025-04-03 00:40:45,143 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250209_00121
+2025-04-03 00:40:46,792 - INFO - 4 novos registros inseridos na tabela tempo.
+2025-04-03 00:40:46,906 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:40:47,016 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:40:47,125 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:41:16,265 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250119_00089
+2025-04-03 00:41:16,289 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250119_00089
+2025-04-03 00:41:17,635 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:41:17,743 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:41:17,861 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:41:17,967 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:41:46,156 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250308_00156
+2025-04-03 00:41:46,195 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250308_00156
+2025-04-03 00:41:48,212 - INFO - 8 novos registros inseridos na tabela tempo.
+2025-04-03 00:41:48,334 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:41:48,441 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:41:48,558 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:42:22,612 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241219_00053
+2025-04-03 00:42:22,642 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241219_00053
+2025-04-03 00:42:24,010 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:42:24,117 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:42:24,230 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:42:24,339 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:42:53,835 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250123_00099
+2025-04-03 00:42:53,862 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250123_00099
+2025-04-03 00:42:55,726 - INFO - 7 novos registros inseridos na tabela tempo.
+2025-04-03 00:42:55,841 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:42:55,946 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:42:56,065 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:43:32,503 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241030_00027
+2025-04-03 00:43:32,531 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241030_00027
+2025-04-03 00:43:33,849 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:43:33,955 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:43:34,062 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:43:34,168 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:44:13,154 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241125_00030
+2025-04-03 00:44:13,184 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241125_00030
+2025-04-03 00:44:14,521 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:44:14,631 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:44:14,746 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:44:14,857 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:44:37,326 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250304_00142
+2025-04-03 00:44:37,357 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250304_00142
+2025-04-03 00:44:39,395 - INFO - 8 novos registros inseridos na tabela tempo.
+2025-04-03 00:44:39,504 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:44:39,611 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:44:39,723 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:45:15,935 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241113_00028
+2025-04-03 00:45:15,960 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241113_00028
+2025-04-03 00:45:17,286 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:45:17,392 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:45:17,498 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:45:17,604 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:45:48,377 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241122_00030
+2025-04-03 00:45:48,425 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241122_00030
+2025-04-03 00:45:50,055 - INFO - 4 novos registros inseridos na tabela tempo.
+2025-04-03 00:45:50,168 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:45:50,276 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:45:50,383 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:46:27,969 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241216_00053
+2025-04-03 00:46:27,999 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241216_00053
+2025-04-03 00:46:29,378 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:46:29,491 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:46:29,597 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:46:29,706 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:46:57,908 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241221_00057
+2025-04-03 00:46:57,935 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241221_00057
+2025-04-03 00:46:59,082 - INFO - Nenhum novo registro para inserir na tabela tempo.
+2025-04-03 00:46:59,189 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:46:59,299 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:46:59,412 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:47:31,474 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250323_00172
+2025-04-03 00:47:31,505 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250323_00172
+2025-04-03 00:47:33,202 - INFO - 6 novos registros inseridos na tabela tempo.
+2025-04-03 00:47:33,307 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:47:33,417 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:47:33,526 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:47:56,014 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250220_00129
+2025-04-03 00:47:56,054 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250220_00129
+2025-04-03 00:47:57,383 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:47:57,490 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:47:57,596 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:47:57,704 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:48:31,330 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241212_00051
+2025-04-03 00:48:31,364 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241212_00051
+2025-04-03 00:48:32,827 - INFO - 3 novos registros inseridos na tabela tempo.
+2025-04-03 00:48:32,953 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:48:33,069 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:48:33,179 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:49:08,322 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241008_00027
+2025-04-03 00:49:08,347 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241008_00027
+2025-04-03 00:49:10,132 - INFO - 6 novos registros inseridos na tabela tempo.
+2025-04-03 00:49:10,247 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:49:10,360 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:49:10,466 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:49:35,084 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241220_00056
+2025-04-03 00:49:35,115 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241220_00056
+2025-04-03 00:49:36,323 - INFO - Nenhum novo registro para inserir na tabela tempo.
+2025-04-03 00:49:36,428 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:49:36,534 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:49:36,641 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:50:18,795 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250317_00161
+2025-04-03 00:50:18,832 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250317_00161
+2025-04-03 00:50:20,405 - INFO - 4 novos registros inseridos na tabela tempo.
+2025-04-03 00:50:20,516 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:50:20,626 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:50:20,738 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:50:44,180 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241214_00053
+2025-04-03 00:50:44,216 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241214_00053
+2025-04-03 00:50:45,628 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:50:45,738 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:50:45,845 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:50:45,971 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:51:21,037 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241022_00027
+2025-04-03 00:51:21,070 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241022_00027
+2025-04-03 00:51:22,411 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:51:22,519 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:51:22,630 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:51:22,740 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:51:53,736 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241119_00029
+2025-04-03 00:51:53,763 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241119_00029
+2025-04-03 00:51:55,012 - INFO - 1 novos registros inseridos na tabela tempo.
+2025-04-03 00:51:55,120 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:51:55,230 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:51:55,340 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:52:23,948 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250116_00087
+2025-04-03 00:52:23,979 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250116_00087
+2025-04-03 00:52:25,099 - INFO - Nenhum novo registro para inserir na tabela tempo.
+2025-04-03 00:52:25,210 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:52:25,321 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:52:25,442 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:53:00,363 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241219_02740
+2025-04-03 00:53:00,893 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241219_02740
+2025-04-03 00:53:02,360 - INFO - Nenhum novo registro para inserir na tabela tempo.
+2025-04-03 00:53:02,467 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:53:02,575 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:53:02,687 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:53:12,330 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250227_00140
+2025-04-03 00:53:12,360 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250227_00140
+2025-04-03 00:53:14,179 - INFO - 6 novos registros inseridos na tabela tempo.
+2025-04-03 00:53:14,287 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:53:14,396 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:53:14,505 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:53:51,163 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20240920_00007
+2025-04-03 00:53:51,193 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20240920_00007
+2025-04-03 00:53:53,551 - INFO - 9 novos registros inseridos na tabela tempo.
+2025-04-03 00:53:53,657 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:53:53,768 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:53:53,878 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:54:36,656 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241031_00027
+2025-04-03 00:54:36,699 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241031_00027
+2025-04-03 00:54:38,279 - INFO - 3 novos registros inseridos na tabela tempo.
+2025-04-03 00:54:38,386 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:54:38,495 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:54:38,604 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:55:10,784 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241230_00061
+2025-04-03 00:55:10,819 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241230_00061
+2025-04-03 00:55:12,245 - INFO - 3 novos registros inseridos na tabela tempo.
+2025-04-03 00:55:12,351 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:55:12,462 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:55:12,574 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:55:41,794 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241114_00028
+2025-04-03 00:55:41,826 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241114_00028
+2025-04-03 00:55:43,515 - INFO - 1 novos registros inseridos na tabela tempo.
+2025-04-03 00:55:43,624 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:55:43,734 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:55:43,846 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:56:32,478 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20240924_00012
+2025-04-03 00:56:32,504 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20240924_00012
+2025-04-03 00:56:33,896 - INFO - 2 novos registros inseridos na tabela tempo.
+2025-04-03 00:56:34,031 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:56:34,138 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:56:34,245 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:56:54,761 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250312_00159
+2025-04-03 00:56:54,795 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250312_00159
+2025-04-03 00:56:56,306 - INFO - 3 novos registros inseridos na tabela tempo.
+2025-04-03 00:56:56,413 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:56:56,533 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:56:56,642 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:57:28,244 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20250203_00104
+2025-04-03 00:57:28,276 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20250203_00104
+2025-04-03 00:57:29,933 - INFO - 5 novos registros inseridos na tabela tempo.
+2025-04-03 00:57:30,039 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:57:30,149 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:57:30,256 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:57:55,929 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241223_00057
+2025-04-03 00:57:55,958 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241223_00057
+2025-04-03 00:57:57,125 - INFO - Nenhum novo registro para inserir na tabela tempo.
+2025-04-03 00:57:57,232 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:57:57,338 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:57:57,445 - INFO - Nenhum novo registro para inserir na tabela pagamento.
+2025-04-03 00:58:23,637 - INFO - Processando arquivo: EXTRATO_UNICA_51309_20241013_00027
+2025-04-03 00:58:23,697 - INFO - Arquivo copiado do Google Drive para processamento: EXTRATO_UNICA_51309_20241013_00027
+2025-04-03 00:58:24,879 - INFO - Nenhum novo registro para inserir na tabela tempo.
+2025-04-03 00:58:24,986 - INFO - Nenhum novo registro para inserir na tabela loja.
+2025-04-03 00:58:25,096 - INFO - Nenhum novo registro para inserir na tabela produto.
+2025-04-03 00:58:25,203 - INFO - Nenhum novo registro para inserir na tabela pagamento.

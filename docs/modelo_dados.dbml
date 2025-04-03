@@ -1,55 +1,136 @@
-Table transacoes {
+// Usando schema específico
+Schema "unica_transactions"
+
+Table "transacoes" {
   id uuid [pk, default: `uuid_generate_v4()`]
-  data_transacao timestamp
-  valor_bruto_venda float
-  valor_liquido_venda float
-  valor_desconto float
-  tipo_produto varchar
-  meio_captura varchar
-  tipo_transacao varchar
-  codigo_bandeira varchar
-  codigo_produto varchar
-  identificacao_loja varchar
-  created_at timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  data_transacao timestamp [not null]
+  valor_bruto_venda decimal(15,2) [not null]
+  valor_liquido_venda decimal(15,2) [not null]
+  valor_desconto decimal(15,2) [not null, default: 0]
+  tipo_produto varchar(50) [not null]
+  meio_captura varchar(50) [not null]
+  tipo_transacao varchar(50) [not null]
+  codigo_bandeira varchar(10) [not null, ref: > pagamento.codigo_bandeira]
+  codigo_produto varchar(20) [not null, ref: > produto.codigo_produto]
+  identificacao_loja varchar(15) [not null, ref: > loja.identificacao_loja]
+  file_id uuid [not null, ref: > controle_arquivos.id]
+  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    (data_transacao, identificacao_loja) [name: 'idx_transacoes_data_loja']
+    codigo_bandeira [name: 'idx_transacoes_bandeira']
+    codigo_produto [name: 'idx_transacoes_produto']
+    file_id [name: 'idx_transacoes_file']
+  }
+
+  checks {
+    valor_bruto_venda >= 0 [name: 'check_valor_bruto_positivo']
+    valor_liquido_venda >= 0 [name: 'check_valor_liquido_positivo']
+    valor_desconto >= 0 [name: 'check_valor_desconto_positivo']
+    valor_desconto <= valor_bruto_venda [name: 'check_desconto_menor_valor_bruto']
+  }
 }
 
-Table tempo {
+Table "tempo" {
   id uuid [pk, default: `uuid_generate_v4()`]
-  data date
-  dia_semana varchar
-  mes int
-  ano int
-  created_at timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  data date [unique, not null]
+  dia_semana varchar(20) [not null]
+  mes int [not null]
+  ano int [not null]
+  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    (ano, mes) [name: 'idx_tempo_ano_mes']
+    data [name: 'idx_tempo_data']
+  }
+
+  checks {
+    mes >= 1 and mes <= 12 [name: 'check_mes_valido']
+    ano >= 2000 [name: 'check_ano_valido']
+  }
 }
 
-Table loja {
+Table "loja" {
   id uuid [pk, default: `uuid_generate_v4()`]
-  identificacao_loja varchar(15) [unique]
-  codigo_ec_venda varchar
-  codigo_ec_pagamento varchar
-  cnpj_ec_pagamento varchar
-  created_at timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  identificacao_loja varchar(15) [unique, not null]
+  codigo_ec_venda varchar(20) [not null]
+  codigo_ec_pagamento varchar(20) [not null]
+  cnpj_ec_pagamento varchar(14) [not null]
+  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    identificacao_loja [name: 'idx_loja_identificacao']
+    cnpj_ec_pagamento [name: 'idx_loja_cnpj']
+  }
+
+  checks {
+    length(cnpj_ec_pagamento) = 14 [name: 'check_cnpj_length']
+  }
 }
 
-Table produto {
+Table "produto" {
   id uuid [pk, default: `uuid_generate_v4()`]
-  codigo_produto varchar(20) [unique]
-  descricao varchar
-  created_at timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  codigo_produto varchar(20) [unique, not null]
+  descricao varchar(100) [not null]
+  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    codigo_produto [name: 'idx_produto_codigo']
+  }
 }
 
-Table pagamento {
+Table "pagamento" {
   id uuid [pk, default: `uuid_generate_v4()`]
-  codigo_bandeira varchar(10) [unique]
-  tipo_pagamento varchar
-  created_at timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+  codigo_bandeira varchar(10) [unique, not null]
+  tipo_pagamento varchar(50) [not null]
+  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    codigo_bandeira [name: 'idx_pagamento_codigo']
+  }
 }
 
-Ref: transacoes.identificacao_loja > loja.identificacao_loja
-Ref: transacoes.codigo_produto > produto.codigo_produto
-Ref: transacoes.codigo_bandeira > pagamento.codigo_bandeira
+Table "controle_arquivos" {
+  id uuid [pk, default: `uuid_generate_v4()`]
+  nome_arquivo varchar(100) [not null]
+  data_geracao date [not null]
+  data_processamento timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  status_processamento varchar(20) [not null]
+  erro_processamento text
+  arquivo_google_drive_path varchar(255)
+  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    nome_arquivo [name: 'idx_controle_nome_arquivo']
+    (data_geracao, status_processamento) [name: 'idx_controle_data_status']
+  }
+
+  checks {
+    status_processamento in ('SUCESSO', 'ERRO', 'PROCESSANDO') [name: 'check_status_valido']
+  }
+}
+
+// Triggers para atualização automática de updated_at
+Ref: "Todas as tabelas devem ter um trigger para atualizar updated_at automaticamente quando houver alteração"
+
+// Comentários nas tabelas
+TableGroup "Fato" {
+  transacoes
+}
+
+TableGroup "Dimensões" {
+  tempo
+  loja
+  produto
+  pagamento
+}
+
+TableGroup "Controle" {
+  controle_arquivos
+}

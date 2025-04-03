@@ -349,3 +349,6 @@ class TransformerTrasacoes:
         else:
             print("Todas as validações passaram.")
             return self.df
+
+
+
