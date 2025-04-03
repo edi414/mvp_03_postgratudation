@@ -1,136 +1,101 @@
-// Usando schema específico
-Schema "unica_transactions"
-
-Table "transacoes" {
-  id uuid [pk, default: `uuid_generate_v4()`]
-  data_transacao timestamp [not null]
-  valor_bruto_venda decimal(15,2) [not null]
-  valor_liquido_venda decimal(15,2) [not null]
-  valor_desconto decimal(15,2) [not null, default: 0]
-  tipo_produto varchar(50) [not null]
-  meio_captura varchar(50) [not null]
-  tipo_transacao varchar(50) [not null]
-  codigo_bandeira varchar(10) [not null, ref: > pagamento.codigo_bandeira]
-  codigo_produto varchar(20) [not null, ref: > produto.codigo_produto]
-  identificacao_loja varchar(15) [not null, ref: > loja.identificacao_loja]
-  file_id uuid [not null, ref: > controle_arquivos.id]
-  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-
-  indexes {
-    (data_transacao, identificacao_loja) [name: 'idx_transacoes_data_loja']
-    codigo_bandeira [name: 'idx_transacoes_bandeira']
-    codigo_produto [name: 'idx_transacoes_produto']
-    file_id [name: 'idx_transacoes_file']
-  }
-
-  checks {
-    valor_bruto_venda >= 0 [name: 'check_valor_bruto_positivo']
-    valor_liquido_venda >= 0 [name: 'check_valor_liquido_positivo']
-    valor_desconto >= 0 [name: 'check_valor_desconto_positivo']
-    valor_desconto <= valor_bruto_venda [name: 'check_desconto_menor_valor_bruto']
-  }
+Table unica_transactions.transacoes {
+    id uuid [pk]
+    data_transacao timestamp
+    horario_transacao varchar(6)
+    tipo_lancamento varchar(20)
+    data_lancamento date
+    valor_bruto_venda decimal(15,2)
+    valor_liquido_venda decimal(15,2)
+    valor_desconto decimal(15,2)
+    tipo_produto varchar(1)
+    meio_captura varchar(1)
+    tipo_transacao varchar(2)
+    codigo_bandeira varchar(3)
+    codigo_produto varchar(3)
+    identificacao_loja varchar(15)
+    nsu_host_transacao varchar(12)
+    numero_cartao varchar(19)
+    numero_parcela varchar(2)
+    numero_total_parcelas varchar(2)
+    nsu_host_parcela varchar(12)
+    valor_bruto_parcela decimal(15,2)
+    valor_desconto_parcela decimal(15,2)
+    valor_liquido_parcela decimal(15,2)
+    banco varchar(3)
+    agencia varchar(6)
+    conta varchar(11)
+    codigo_autorizacao varchar(12)
+    valor_tx_interchange_tarifa decimal(15,2)
+    valor_tx_administracao decimal(15,2)
+    valor_tx_interchange_parcela decimal(15,2)
+    valor_tx_administracao_parcela decimal(15,2)
+    valor_redutor_multi_fronteira decimal(15,2)
+    valor_tx_antecipacao decimal(15,2)
+    valor_liquido_antecipado decimal(15,2)
+    codigo_pedido varchar(30)
+    sigla_pais varchar(3)
+    data_vencimento_original date
+    indicador_deb_balance varchar(1)
+    indicador_reenvio varchar(1)
+    nsu_origem varchar(6)
+    numero_operacao_recebivel varchar(20)
+    sequencial_operacao_recebivel varchar(2)
+    tipo_operacao_recebivel varchar(1)
+    valor_operacao_recebivel decimal(15,2)
+    file_id uuid
+    created_at timestamp
+    updated_at timestamp
 }
 
-Table "tempo" {
-  id uuid [pk, default: `uuid_generate_v4()`]
-  data date [unique, not null]
-  dia_semana varchar(20) [not null]
-  mes int [not null]
-  ano int [not null]
-  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-
-  indexes {
-    (ano, mes) [name: 'idx_tempo_ano_mes']
-    data [name: 'idx_tempo_data']
-  }
-
-  checks {
-    mes >= 1 and mes <= 12 [name: 'check_mes_valido']
-    ano >= 2000 [name: 'check_ano_valido']
-  }
+Table unica_transactions.loja {
+    id uuid [pk]
+    identificacao_loja varchar [unique]
+    codigo_ec_venda varchar
+    codigo_ec_pagamento varchar
+    cnpj_ec_pagamento varchar
+    created_at timestamp
+    updated_at timestamp
 }
 
-Table "loja" {
-  id uuid [pk, default: `uuid_generate_v4()`]
-  identificacao_loja varchar(15) [unique, not null]
-  codigo_ec_venda varchar(20) [not null]
-  codigo_ec_pagamento varchar(20) [not null]
-  cnpj_ec_pagamento varchar(14) [not null]
-  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-
-  indexes {
-    identificacao_loja [name: 'idx_loja_identificacao']
-    cnpj_ec_pagamento [name: 'idx_loja_cnpj']
-  }
-
-  checks {
-    length(cnpj_ec_pagamento) = 14 [name: 'check_cnpj_length']
-  }
+Table unica_transactions.produto {
+    id uuid [pk]
+    codigo_produto varchar [unique]
+    descricao varchar
+    created_at timestamp
+    updated_at timestamp
 }
 
-Table "produto" {
-  id uuid [pk, default: `uuid_generate_v4()`]
-  codigo_produto varchar(20) [unique, not null]
-  descricao varchar(100) [not null]
-  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-
-  indexes {
-    codigo_produto [name: 'idx_produto_codigo']
-  }
+Table unica_transactions.pagamento {
+    id uuid [pk]
+    codigo_bandeira varchar [unique]
+    tipo_pagamento varchar
+    created_at timestamp
+    updated_at timestamp
 }
 
-Table "pagamento" {
-  id uuid [pk, default: `uuid_generate_v4()`]
-  codigo_bandeira varchar(10) [unique, not null]
-  tipo_pagamento varchar(50) [not null]
-  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-
-  indexes {
-    codigo_bandeira [name: 'idx_pagamento_codigo']
-  }
+Table unica_transactions.tempo {
+    id uuid [pk]
+    data date [unique]
+    dia_semana varchar
+    mes int
+    ano int
+    created_at timestamp
+    updated_at timestamp
 }
 
-Table "controle_arquivos" {
-  id uuid [pk, default: `uuid_generate_v4()`]
-  nome_arquivo varchar(100) [not null]
-  data_geracao date [not null]
-  data_processamento timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  status_processamento varchar(20) [not null]
-  erro_processamento text
-  arquivo_google_drive_path varchar(255)
-  created_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [not null, default: `CURRENT_TIMESTAMP`]
-
-  indexes {
-    nome_arquivo [name: 'idx_controle_nome_arquivo']
-    (data_geracao, status_processamento) [name: 'idx_controle_data_status']
-  }
-
-  checks {
-    status_processamento in ('SUCESSO', 'ERRO', 'PROCESSANDO') [name: 'check_status_valido']
-  }
+Table unica_transactions.controle_arquivos {
+    id uuid [pk]
+    nome_arquivo varchar [unique]
+    data_geracao date
+    data_processamento timestamp
+    status_processamento varchar(20)
+    erro_processamento text
+    arquivo_google_drive_path varchar(255)
+    created_at timestamp
+    updated_at timestamp
 }
 
-// Triggers para atualização automática de updated_at
-Ref: "Todas as tabelas devem ter um trigger para atualizar updated_at automaticamente quando houver alteração"
-
-// Comentários nas tabelas
-TableGroup "Fato" {
-  transacoes
-}
-
-TableGroup "Dimensões" {
-  tempo
-  loja
-  produto
-  pagamento
-}
-
-TableGroup "Controle" {
-  controle_arquivos
-}
+Ref: unica_transactions.transacoes.identificacao_loja > unica_transactions.loja.identificacao_loja
+Ref: unica_transactions.transacoes.codigo_produto > unica_transactions.produto.codigo_produto
+Ref: unica_transactions.transacoes.codigo_bandeira > unica_transactions.pagamento.codigo_bandeira
+Ref: unica_transactions.transacoes.file_id > unica_transactions.controle_arquivos.id

@@ -6,7 +6,7 @@ import psycopg2
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 sns.set_palette(['#8B0000', '#A52A2A', '#B22222', '#DC143C'])
 plt.rcParams['figure.figsize'] = (15, 7)
 plt.rcParams['font.size'] = 12
@@ -87,7 +87,7 @@ def plot_mdr_by_produto(df: pd.DataFrame) -> None:
     plt.tight_layout()
     plt.show()
 
-def calculate_mdr_by_produto(connection_params: Dict) -> pd.DataFrame:
+def calculate_mdr_by_produto(connection_params: Dict, mes: str = None) -> pd.DataFrame:
     query = """
     SELECT 
         pr.codigo_produto,
@@ -99,13 +99,22 @@ def calculate_mdr_by_produto(connection_params: Dict) -> pd.DataFrame:
         SUM(t.valor_bruto_venda - t.valor_liquido_venda) as mdr_nominal
     FROM unica_transactions.transacoes t
     JOIN unica_transactions.produto pr ON t.codigo_produto = pr.codigo_produto
+    """
+    
+    if mes:
+        query += " WHERE DATE_TRUNC('month', t.data_transacao) = %s"
+        params = (mes,)
+    else:
+        params = None
+    
+    query += """
     GROUP BY pr.codigo_produto, pr.descricao
     ORDER BY mdr_nominal DESC
     """
     
     try:
         conn = psycopg2.connect(**connection_params)
-        df = pd.read_sql(query, conn)
+        df = pd.read_sql(query, conn, params=params)
         return df
     except Exception as e:
         logging.error(f"Erro ao calcular MDR por produto: {e}")
