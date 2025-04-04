@@ -15,50 +15,6 @@ plt.rcParams['axes.titlesize'] = 16
 plt.rcParams['xtick.labelsize'] = 12
 plt.rcParams['ytick.labelsize'] = 12
 
-def plot_mdr_by_bandeira(df: pd.DataFrame) -> None:
-    plt.figure(figsize=(12, 6))
-    sns.barplot(data=df, x='codigo_bandeira', y='mdr_percentual', hue='tipo_pagamento')
-    plt.title('MDR por Bandeira e Tipo de Pagamento')
-    plt.xlabel('Bandeira')
-    plt.ylabel('MDR (%)')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
-
-def calculate_mdr_by_bandeira(connection_params: Dict) -> pd.DataFrame:
-    query = """
-    SELECT 
-        p.codigo_bandeira,
-        p.tipo_pagamento,
-        CASE 
-            WHEN t.numero_total_parcelas > '01' THEN 'Parcelado'
-            ELSE 'À Vista'
-        END as tipo_parcelamento,
-        COUNT(*) as total_transacoes,
-        SUM(t.valor_bruto_venda) as valor_total,
-        SUM(t.valor_liquido_venda) as valor_liquido,
-        (SUM(t.valor_bruto_venda) - SUM(t.valor_liquido_venda)) / SUM(t.valor_bruto_venda) * 100 as mdr_percentual
-    FROM unica_transactions.transacoes t
-    JOIN unica_transactions.pagamento p ON t.codigo_bandeira = p.codigo_bandeira
-    GROUP BY p.codigo_bandeira, p.tipo_pagamento, 
-        CASE 
-            WHEN t.numero_total_parcelas > '01' THEN 'Parcelado'
-            ELSE 'À Vista'
-        END
-    ORDER BY mdr_percentual DESC
-    """
-    
-    try:
-        conn = psycopg2.connect(**connection_params)
-        df = pd.read_sql(query, conn)
-        return df
-    except Exception as e:
-        logging.error(f"Erro ao calcular MDR por bandeira: {e}")
-        return pd.DataFrame()
-    finally:
-        if conn:
-            conn.close()
-
 def plot_mdr_by_produto(df: pd.DataFrame) -> None:
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(15, 12))
     
@@ -123,219 +79,6 @@ def calculate_mdr_by_produto(connection_params: Dict, mes: str = None) -> pd.Dat
         if conn:
             conn.close()
 
-def simulate_mdr_scenarios(connection_params: Dict, 
-                          bandeira: str, 
-                          produto: str,
-                          tipo_pagamento: str,
-                          parcelado: bool,
-                          aumento_percentual: float) -> Tuple[pd.DataFrame, float]:
-    query = """
-    SELECT 
-        t.valor_bruto_venda,
-        t.valor_liquido_venda,
-        p.codigo_bandeira,
-        p.tipo_pagamento,
-        pr.descricao as produto,
-        t.numero_total_parcelas
-    FROM unica_transactions.transacoes t
-    JOIN unica_transactions.pagamento p ON t.codigo_bandeira = p.codigo_bandeira
-    JOIN unica_transactions.produto pr ON t.codigo_produto = pr.codigo_produto
-    WHERE p.codigo_bandeira = %s
-    AND pr.codigo_produto = %s
-    AND p.tipo_pagamento = %s
-    AND CASE 
-        WHEN %s = true THEN t.numero_total_parcelas > '01'
-        ELSE t.numero_total_parcelas = '01'
-    END
-    """
-    
-    try:
-        conn = psycopg2.connect(**connection_params)
-        df = pd.read_sql(query, conn, params=(bandeira, produto, tipo_pagamento, parcelado))
-        
-        df['mdr_atual'] = (df['valor_bruto_venda'] - df['valor_liquido_venda']) / df['valor_bruto_venda'] * 100
-        df['novo_mdr_percentual'] = df['mdr_atual'] * (1 + aumento_percentual/100)
-        df['novo_valor_liquido'] = df['valor_bruto_venda'] * (1 - df['novo_mdr_percentual']/100)
-        df['impacto'] = df['novo_valor_liquido'] - df['valor_liquido_venda']
-        impacto_total = df['impacto'].sum()
-        
-        return df, impacto_total
-        
-    except Exception as e:
-        logging.error(f"Erro ao simular cenários de MDR: {e}")
-        return pd.DataFrame(), 0
-    finally:
-        if conn:
-            conn.close()
-
-def plot_mdr_trends(df: pd.DataFrame) -> None:
-    plt.figure(figsize=(12, 6))
-    sns.lineplot(data=df, x='data_transacao', y='mdr_percentual', 
-                 hue='codigo_bandeira', style='tipo_pagamento')
-    plt.title('Evolução do MDR por Bandeira e Tipo de Pagamento')
-    plt.xlabel('Data')
-    plt.ylabel('MDR (%)')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
-
-def analyze_mdr_trends(connection_params: Dict, 
-                      bandeira: str = None, 
-                      periodo_dias: int = 30) -> pd.DataFrame:
-    query = """
-    SELECT 
-        t.data_transacao,
-        p.codigo_bandeira,
-        p.tipo_pagamento,
-        CASE 
-            WHEN t.numero_total_parcelas > '01' THEN 'Parcelado'
-            ELSE 'À Vista'
-        END as tipo_parcelamento,
-        COUNT(*) as total_transacoes,
-        SUM(t.valor_bruto_venda) as valor_total,
-        SUM(t.valor_liquido_venda) as valor_liquido,
-        (SUM(t.valor_bruto_venda) - SUM(t.valor_liquido_venda)) / SUM(t.valor_bruto_venda) * 100 as mdr_percentual
-    FROM unica_transactions.transacoes t
-    JOIN unica_transactions.pagamento p ON t.codigo_bandeira = p.codigo_bandeira
-    WHERE t.data_transacao >= CURRENT_DATE - INTERVAL '%s days'
-    """
-    
-    if bandeira:
-        query += " AND p.codigo_bandeira = %s"
-        params = (periodo_dias, bandeira)
-    else:
-        params = (periodo_dias,)
-    
-    query += " GROUP BY t.data_transacao, p.codigo_bandeira, p.tipo_pagamento, "
-    query += " CASE WHEN t.numero_total_parcelas > '01' THEN 'Parcelado' ELSE 'À Vista' END "
-    query += " ORDER BY t.data_transacao"
-    
-    try:
-        conn = psycopg2.connect(**connection_params)
-        df = pd.read_sql(query, conn, params=params)
-        return df
-    except Exception as e:
-        logging.error(f"Erro ao analisar tendências de MDR: {e}")
-        return pd.DataFrame()
-    finally:
-        if conn:
-            conn.close()
-
-def calculate_mdr_impact_by_store(connection_params: Dict) -> pd.DataFrame:
-    query = """
-    SELECT 
-        l.identificacao_loja,
-        COUNT(*) as total_transacoes,
-        SUM(t.valor_bruto_venda) as valor_total,
-        SUM(t.valor_liquido_venda) as valor_liquido,
-        (SUM(t.valor_bruto_venda) - SUM(t.valor_liquido_venda)) / SUM(t.valor_bruto_venda) * 100 as mdr_percentual,
-        SUM(t.valor_bruto_venda - t.valor_liquido_venda) as valor_mdr
-    FROM unica_transactions.transacoes t
-    JOIN unica_transactions.loja l ON t.identificacao_loja = l.identificacao_loja
-    GROUP BY l.identificacao_loja
-    ORDER BY valor_mdr DESC
-    """
-    
-    try:
-        conn = psycopg2.connect(**connection_params)
-        df = pd.read_sql(query, conn)
-        return df
-    except Exception as e:
-        logging.error(f"Erro ao calcular impacto do MDR por loja: {e}")
-        return pd.DataFrame()
-    finally:
-        if conn:
-            conn.close()
-
-def simulate_mdr_impact(connection_params, bandeira, produto, tipo_pagamento, parcelado, nova_taxa_mdr):
-    try:
-        conn = psycopg2.connect(**connection_params)
-        
-        query = """
-            WITH transacoes_filtradas AS (
-                SELECT 
-                    t.data_transacao,
-                    t.valor_bruto_venda,
-                    t.valor_tx_interchange_tarifa,
-                    t.valor_tx_administracao,
-                    t.valor_tx_interchange_parcela,
-                    t.valor_tx_administracao_parcela,
-                    t.numero_total_parcelas,
-                    p.codigo_bandeira,
-                    pr.codigo_produto,
-                    p.tipo_pagamento
-                FROM unica_transactions.transacoes t
-                JOIN unica_transactions.pagamento p ON t.codigo_bandeira = p.codigo_bandeira
-                JOIN unica_transactions.produto pr ON t.codigo_produto = pr.codigo_produto
-                WHERE p.codigo_bandeira = %s
-                AND pr.codigo_produto = %s
-                AND p.tipo_pagamento = %s
-                AND CASE 
-                    WHEN %s = true THEN t.numero_total_parcelas > '01'
-                    ELSE t.numero_total_parcelas = '01'
-                END
-                AND t.data_transacao >= CURRENT_DATE - INTERVAL '30 days'
-            )
-            SELECT 
-                DATE_TRUNC('week', data_transacao) as semana,
-                DATE_TRUNC('month', data_transacao) as mes,
-                COUNT(*) as total_transacoes,
-                SUM(valor_bruto_venda) as volume_total,
-                SUM(
-                    CASE 
-                        WHEN numero_total_parcelas > '01' THEN 
-                            valor_tx_interchange_parcela + valor_tx_administracao_parcela
-                        ELSE 
-                            valor_tx_interchange_tarifa + valor_tx_administracao
-                    END
-                ) as mdr_atual,
-                SUM(valor_bruto_venda * (%s / 100)) as mdr_proposto
-            FROM transacoes_filtradas
-            GROUP BY 
-                DATE_TRUNC('week', data_transacao),
-                DATE_TRUNC('month', data_transacao)
-            ORDER BY semana DESC
-        """
-        
-        with conn.cursor() as cur:
-            cur.execute(query, (
-                bandeira, 
-                produto, 
-                tipo_pagamento, 
-                parcelado,
-                nova_taxa_mdr
-            ))
-            
-            columns = [
-                'semana', 'mes', 'total_transacoes', 'volume_total',
-                'mdr_atual', 'mdr_proposto'
-            ]
-            results = cur.fetchall()
-            
-            if not results:
-                return None, None, None
-            
-            df = pd.DataFrame(results, columns=columns)
-            
-            df['diferenca_mdr'] = df['mdr_proposto'] - df['mdr_atual']
-            
-            impacto_semanal = df.groupby('semana')['diferenca_mdr'].sum().mean()
-            impacto_mensal = df.groupby('mes')['diferenca_mdr'].sum().mean()
-            
-            df['volume_total'] = df['volume_total'].apply(lambda x: f"R$ {x:,.2f}")
-            df['mdr_atual'] = df['mdr_atual'].apply(lambda x: f"R$ {x:,.2f}")
-            df['mdr_proposto'] = df['mdr_proposto'].apply(lambda x: f"R$ {x:,.2f}")
-            df['diferenca_mdr'] = df['diferenca_mdr'].apply(lambda x: f"R$ {x:,.2f}")
-            
-            return df, impacto_semanal, impacto_mensal
-            
-    except Exception as e:
-        logging.error(f"Erro ao simular impacto MDR: {e}")
-        raise
-    finally:
-        if conn:
-            conn.close()
-
 def simulate_mdr_by_product(connection_params, taxas_json):
     try:
         conn = psycopg2.connect(**connection_params)
@@ -352,7 +95,7 @@ def simulate_mdr_by_product(connection_params, taxas_json):
                 FROM unica_transactions.transacoes t
                 JOIN unica_transactions.pagamento p ON t.codigo_bandeira = p.codigo_bandeira
                 JOIN unica_transactions.produto pr ON t.codigo_produto = pr.codigo_produto
-                WHERE t.data_transacao >= CURRENT_DATE - INTERVAL '30 days'
+                --WHERE t.data_transacao >= CURRENT_DATE - INTERVAL '30 days'
             )
             SELECT 
                 DATE_TRUNC('month', data_transacao) as mes,
@@ -415,7 +158,7 @@ def simulate_mdr_by_product(connection_params, taxas_json):
             }).reset_index()
             
             plt.figure(figsize=(15, 7))
-            plt.plot(df_mensal['mes'], df_mensal['mdr_atual'], label='MDR Atual', marker='o', linewidth=2, color='#8B0000')
+            plt.plot(df_mensal['mes'], df_mensal['mdr_atual'], label='MDR Atual', marker='o', linewidth=2, color='#006400')
             plt.plot(df_mensal['mes'], df_mensal['mdr_proposto'], label='MDR Proposto', marker='o', linewidth=2, color='#A52A2A')
             plt.title('Comparação MDR Atual vs Proposto (Agrupado por Mês)', pad=20)
             plt.xlabel('Mês')
