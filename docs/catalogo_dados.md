@@ -1,7 +1,24 @@
 # Catálogo de Dados - Unica Transactions
 
 ## Visão Geral
-Este catálogo descreve a estrutura do banco de dados utilizado para armazenar e processar transações financeiras. O banco é organizado em um schema chamado `unica_transactions` e utiliza um modelo dimensional para análise de dados.
+Este catálogo descreve a estrutura do banco de dados utilizado para armazenar e processar transações financeiras. O banco é organizado em um schema chamado `unica_transactions` e utiliza um modelo dimensional (Star Schema) para análise de dados.
+
+### Arquitetura do Modelo
+O modelo segue a arquitetura Star Schema (Esquema Estrela), que consiste em:
+
+- **Tabela Fato (transacoes)**: Centraliza os eventos transacionais com granularidade ao nível de cada transação (NSU), contendo as métricas de negócio (valores brutos, líquidos e taxas).
+
+- **Tabelas Dimensão**:
+  - `loja`: Dimensão com informações dos estabelecimentos
+  - `produto`: Dimensão com tipos de produtos financeiros
+  - `pagamento`: Dimensão com formas e condições de pagamento
+  - `tempo`: Dimensão temporal para análises cronológicas
+  - `controle_arquivos`: Dimensão para rastreamento do processamento
+
+### Benefícios da Modelagem
+- Facilita análises multidimensionais
+- Otimiza consultas de agregação e simplifica a criação de relatórios
+- Permite drill-down e roll-up eficientes nas análises de MDR
 
 ## Esquema do Banco
 
