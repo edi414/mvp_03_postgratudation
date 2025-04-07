@@ -168,6 +168,7 @@ Notebook para teste e validação do pipeline ETL e visualização das análises
 Acesso: 
 
 - [Notebook de Teste](notebooks/tryout.ipynb)
+- [Testar Notebook no Google Colab](https://colab.research.google.com/github/edi414/mvp_03_postgratudation/blob/main/notebooks/tryout.ipynb#scrollTo=-yo8smdoOHeg) 
 
 ## Referências
 
